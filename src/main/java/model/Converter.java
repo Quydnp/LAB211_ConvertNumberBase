@@ -54,26 +54,35 @@ public class Converter {
         }
     }
 
-    public void convertFromBinary(String binary) {
+    public void convertFromBinary(String binary, int base) {
         int decimal = Integer.parseInt(binary, 2);
-        System.out.println("Decimal: " + decimal);
-        String hexa = Integer.toHexString(decimal).toUpperCase();
-        System.out.println("Hexadecimal: " + hexa);
+        if (base == 10) {
+            System.out.println("Decimal: " + decimal);
+        } else if (base == 16) {
+            String hexa = Integer.toHexString(decimal).toUpperCase();
+            System.out.println("Hexadecimal: " + hexa);
+        }
     }
 
-    public void convertFromDecimal(String decimal) {
+    public void convertFromDecimal(String decimal, int base) {
         int dec = Integer.parseInt(decimal);
-        String binary = Integer.toBinaryString(dec);
-        System.out.println("Binary: " + binary);
-        String hexa = Integer.toHexString(dec).toUpperCase();
-        System.out.println("Hexadecimal: " + hexa);
+        if (base == 2) {
+            String binary = Integer.toBinaryString(dec);
+            System.out.println("Binary: " + binary);
+        } else if (base == 16) {
+            String hexa = Integer.toHexString(dec).toUpperCase();
+            System.out.println("Hexadecimal: " + hexa);
+        }
     }
 
-    public void convertFromHexa(String hexa) {
+    public void convertFromHexa(String hexa, int base) {
         int decimal = Integer.parseInt(hexa, 16);
-        System.out.println("Decimal: " + decimal);
-        String binary = Integer.toBinaryString(decimal);
-        System.out.println("Binary: " + binary);
+        if (base == 10) {
+            System.out.println("Decimal: " + decimal);
+        } else if (base == 2) {
+            String binary = Integer.toBinaryString(decimal);
+            System.out.println("Binary: " + binary);
+        }
     }
 
     public void workWithArrays(Element element) {
