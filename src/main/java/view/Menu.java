@@ -39,7 +39,7 @@ public abstract class Menu<T>  {
             display();//hiện menu
             choice = getChoice();
             execute(choice);//xử lý 
-        } while (choice > 0 && choice < list.size()+1);
+        } while (choice > 0 && choice < list.size());
 
     }
 }

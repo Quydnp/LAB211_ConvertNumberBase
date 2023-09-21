@@ -15,7 +15,8 @@ public class ConvertingBaseNumberProgram extends Menu<String> {
     Converter converter = new Converter();
     Menu menuBin = new Menu("Convert Binary Number", new String[]{
             "Convert From Binary to Decimal",
-            "Convert From Binary to Hexadecimal"}) {
+            "Convert From Binary to Hexadecimal", 
+            "Return to main menu"}) {
         @Override
         public void execute(int choice) {
             switch (choice) {
@@ -32,7 +33,8 @@ public class ConvertingBaseNumberProgram extends Menu<String> {
     };
     Menu menuDec = new Menu("Convert Decimal Number", new String[]{
             "Convert From Decimal to Binary",
-            "Convert From Decimal to Hexadecimal"}) {
+            "Convert From Decimal to Hexadecimal", 
+            "Return to main menu"}) {
         @Override
         public void execute(int choice) {
             switch (choice) {
@@ -49,7 +51,8 @@ public class ConvertingBaseNumberProgram extends Menu<String> {
     };
     Menu menuHex = new Menu("Convert Hexadecimal Number", new String[]{
             "Convert From Hexadecimal to Decimal",
-            "Convert From Hexadecimal to Binary"}) {
+            "Convert From Hexadecimal to Binary", 
+            "Return to main menu"}) {
         @Override
         public void execute(int choice) {
             switch (choice) {
